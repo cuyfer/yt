@@ -1,0 +1,56 @@
+<!-- basreng card -->
+<div class="card" onclick="openPopup('popup-basreng')">
+  <img src="./basreng.jpg" alt="p">
+  <div class="card-content">
+    <h3>Basreng</h3>
+    <h3>Default</h3>
+  </div>
+  <div class="like-button">
+    <p id="sukasatu">59 like</p>
+    <button onclick="tomsatu(1)" type="button"><i class="material-icons">thumb_up</i></button>
+  </div>
+</div>
+
+<!-- lumpia card -->
+<div class="card" onclick="openPopup('popup-lumpia')">
+  <img src="./lumpia.jpg" alt="p">
+  <div class="card-content">
+    <h3>Lumpia</h3>
+    <h3>Default(pedas)</h3>
+  </div>
+  <div class="like-button">
+    <p id="sukalima">67 like</p>
+    <button onclick="tomsatu(5)" type="button"><i class="material-icons">thumb_up</i></button>
+  </div>
+</div>
+
+<!-- ketapang card -->
+<div class="card" onclick="openPopup('popup-ketapang')">
+  <img src="./ketapang.jpg" alt="p">
+  <div class="card-content">
+    <h3>Biji Ketapang</h3>
+    <h3>Default(manis)</h3>
+  </div>
+  <div class="like-button">
+    <p id="sukaenam">87 like</p>
+    <button onclick="tomsatu(6)" type="button"><i class="material-icons">thumb_up</i></button>
+  </div>
+</div>
+
+
+<script>
+function openPopup(popupId) {
+    // Close all popups
+    const popups = document.querySelectorAll('.popup-overlay');
+    popups.forEach(popup => popup.classList.remove('active'));
+
+    // Open the selected popup
+    const popup = document.getElementById(popupId);
+    popup.classList.add('active');
+}
+
+function closePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.classList.remove('active');
+}
+</script>

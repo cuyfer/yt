@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yetim</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="icon" href="logo.jpg" type="image/x-icon">
+  <link rel="icon" href="logo.jpg" type="image/png">
+</head>
+<body>
+  
+  <div class="popup" id="popup">
+    <div class="popup-content">
+        <h2>Masukan Nama Dan Foto Untuk Profil Anda</h2>
+        <input type="text" id="username" placeholder="Nama Anda">
+        <label for="file-upload" class="custom-file-upload">
+          <i class="material-icons">cloud_upload</i> Pilih Foto Anda
+        </label>
+        <input type="file" id="file-upload" accept="image/*">
+        <button id="kirim-nama">Login</button>
+    </div>
+</div>
+
+<div class="cari-nav">
+     <input type="search" id="cari" placeholder="Search Yetim">
+     <div class="fot">
+         <img id="phuoto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsWHk--o2useaja5hnx2gjDvSyXreDEimsTiC8NnFLEw&s" alt=".">
+        </div>
+
+</div>
+ 
+<nav id="nab">
+    <button type="button" id="madang"><i class="material-icons">shopping_cart</i></button>
+    <div class="cari">
+        <input type="search" id="carii" placeholder="Search Yetim">
+    </div>
+        <img id="poto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsWHk--o2useaja5hnx2gjDvSyXreDEimsTiC8NnFLEw&s" alt=".">
+</nav>
+
+
+
+<div class="sapa">
+  <h2 id="sapa">happy shopping 🛒😇</h2>
+
+</div>
+  <div class="tom">
+    <button type="button" id="basreng">Basreng</button>    
+    <button type="button" id="lumpia">Lumpia</button>
+    <button type="button" id="bijiketapang">Ketapang</button>
+    <button type="button" id="all">All</button>
+
+  </div>
+
+<div class="toko">
+  
+  <!-- basreng -->
+<div class="card">
+  <img src="./basreng.jpg" onclick="openPopup('popup-overlay-basreng', 'Default')" alt="p">
+  <div class="card-content">
+    <h3>Basreng</h3>
+    <h3>Default</h3>
+  </div>
+  <div class="like-button">
+    <p id="sukasatu">59 like</p>
+    <button onclick="tomsatu(1)" type="button"><i class="material-icons">thumb_up</i></button>
+  </div>
+</div>
+
+<div class="card" >
+  <img src="./basreng.jpg" onclick="openPopup('popup-overlay-basreng', 'Level 1')" alt="p">
+  <div class="card-content">
+    <h3>Basreng</h3>
+    <h3>Level 1</h3>
+  </div>
+  <div class="like-button">
+    <p id="sukadua">76 like</p>
+    <button onclick="tomsatu(2)" type="button"><i class="material-icons">thumb_up</i></button>
+  </div>
+</div>
+
+<div class="card" >
+  <img src="./basreng.jpg" onclick="openPopup('popup-overlay-basreng', 'Level 2')" alt="p">
+  <div class="card-content">
+    <h3>Basreng</h3>
+    <h3>Level 2</h3>
+  </div>
+  <div class="like-button">
+    <p id="sukatiga">59 like</p>
+    <button onclick="tomsatu(3)" type="button"><i class="material-icons">thumb_up</i></button>
+  </div>
+</div>
+
+<div class="card" >
+  <img src="./basreng.jpg" onclick="openPopup('popup-overlay-basreng', 'Level 3')" alt="p">
+  <div class="card-content">
+    <h3>Basreng</h3>
+    <h3>Level 3</h3>
+  </div>
+  <div class="like-button">
+    <p id="sukaempat">59 like</p>
+    <button onclick="tomsatu(4)" type="button"><i class="material-icons">thumb_up</i></button>
+  </div>
+</div>
+
+
+
+<div class="card" >
+  <img src="./lumpia.jpg" onclick="openPopupp('popup-overlay-lumpia','Lumpia')" alt="p">
+  <div class="card-content">
+    <h3>Lumpia</h3>
+    <h3>Default(pedas)</h3>
+  </div>
+  <div class="like-button">
+    <p id="sukalima">67 like</p>
+    <button onclick="tomsatu(5)" type="button"><i class="material-icons">thumb_up</i></button>
+  </div>
+</div>
+
+<div class="card" >
+  <img src="./ketapang.jpg" onclick="openPopupp('popup-overlay-ketapang','Ketapang')" alt="p">
+  <div class="card-content">
+    <h3>Biji Ketapang</h3>
+    <h3>Default(manis)</h3>
+  </div>
+  <div class="like-button">
+    <p id="sukaenam">87 like</p>
+    <button onclick="tomsatu(6)" type="button"><i class="material-icons">thumb_up</i></button>
+  </div>
+</div>
+
+
+
+</div>
+
+<div class="tambahan"></div>
+
+<!-- pop -->
+
+<!-- basreng✓ -->
+
+<div class="popup-overlay" id="popup-overlay-basreng">
+    <div class="popup-container" id="popup-container-basreng">
+        <span class="close-btn" onclick="closePopup('popup-overlay-basreng')">X</span>
+        <img src="basreng.jpg" alt="Product Image" class="product-image">
+        <h1 id="namane"></h1>
+        <p class="product-explanation" id="popup-explanation-basreng"></p>
+        <a href="https://shp.ee/icho8bt" class="order-btn">Order Mas</a>
+    </div>
+</div>
+
+<!-- lumpia -->
+
+<div class="popup-overlay" id="popup-overlay-lumpia">
+    <div class="popup-container" id="popup-container-lumpia">
+        <span class="close-btn" onclick="closePopup('popup-overlay-lumpia')">X</span>
+        <img src="lumpia.jpg" alt="Product Image" class="product-image">
+        <h1 id="namak"></h1>
+        <p class="product-explanation">Lumpia yaitu jajanan yang enak dan sangat enak untuk yang sedang kerja atau rebahan brayyy</p>
+        <a href="https://shp.ee/lkscf8w" class="order-btn">Order Mas</a>
+    </div>
+</div>
+
+<!-- ketapang -->
+
+<div class="popup-overlay" id="popup-overlay-ketapang">
+    <div class="popup-container" id="popup-container-ketapang">
+        <span class="close-btn" onclick="closePopup('popup-overlay-ketapang')">X</span>
+        <img src="ketapang.jpg" alt="Product Image" class="product-image">
+        <h1 id="namai"></h1>
+        <p class="product-explanation">Ketapang itu sangat manis rasanya bagus untuk mengemil kalau lagi kerja atau lagi rebahan ya kan broo</p>
+        <a href="https://shp.ee/47hxa2b" class="order-btn">Order Mas</a>
+    </div>
+</div>
+
+
+
+
+<!-- <footer>
+  
+<a href="https://wa.me/6283182719413">Copyright Adyfas</a>
+  
+</footer> -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="mainJsKar.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
